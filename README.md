@@ -217,36 +217,6 @@ The complete mathematical derivations, schematic captures, and DRC/LVS layout bo
 
 ---
 
-## EDA Simulation & Replication Guide
-
-### Prerequisites
-* Cadence Virtuoso IC6.1.8 or newer (Schematic Editor & Layout XL)
-* Cadence Spectre Circuit Simulator
-* Generic PDK 180nm (`gpdk180` or compatible foundry 180nm kit)
-* Logisim-Evolution v4.1.0 (for standalone logic simulation)
-
-### 1. Standalone Logic Verification via Logisim
-To inspect the gate-level schematic and test vectors without opening Cadence:
-```bash
-logisim-evolution simulation/lablast.circ
-```
-
-### 2. Cadence Virtuoso Spectre Simulation
-1. Start Cadence Virtuoso:
-   ```bash
-   virtuoso &
-   ```
-2. In the Library Manager, navigate to `vedic_multiplier` and open the testbench cellview:
-   * Schematic: `8x8_opt__ciruit`
-   * Testbench: `8x8_multiplier_tb`
-3. Launch ADE L (Analog Design Environment):
-   * Stimulus: Load digital vector stimulus from [`simulation/fulladder.vec`](simulation/fulladder.vec) or define bus sources for `A[7:0]` and `B[7:0]`.
-   * Analysis: `tran` (Stop Time: `200ns`, Conservative accuracy).
-   * Run simulation (`Netlist and Run`).
-4. View the 16-bit bus output in ViVA (Virtuoso Visualization & Analysis).
-
----
-
 ## Author & Academic Information
 
 * **Designer:** Yash
