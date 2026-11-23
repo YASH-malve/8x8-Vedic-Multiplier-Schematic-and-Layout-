@@ -1,4 +1,4 @@
-# High-Performance 8×8 Urdhva Tiryakbhyam CMOS Vedic Multiplier
+# 8×8 Urdhva Tiryakbhyam CMOS Vedic Multiplier
 ### Transistor-Level Schematic Optimization & Full-Custom Physical Layout in 180nm CMOS
 
 [![Cadence Virtuoso](https://img.shields.io/badge/EDA-Cadence%20Virtuoso%20IC6.1.8-blue?logo=cadence&logoColor=white)](https://www.cadence.com/)
